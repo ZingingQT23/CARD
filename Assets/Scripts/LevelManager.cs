@@ -20,6 +20,12 @@ public class LevelManager : MonoBehaviour {
 		Time.timeScale = 1.0f;
 	}
 
+	public void LoadPrevLevel(){
+		string prev_level = "";
+		prev_level = PlayerPrefsManager.GetPrevScene ();
+		Application.LoadLevel (prev_level);
+	}
+
 	public void QuitRequest(){
 		Debug.Log ("Quit requested");
 		Application.Quit ();

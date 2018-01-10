@@ -11,6 +11,7 @@ public class LoseCollider : MonoBehaviour {
 		if (!attacker) {
 			return;
 		} else {
+			PlayerPrefsManager.SetPrevScene ();
 			Application.LoadLevel ("03b Lose");
 		}
 	}
