@@ -29,7 +29,6 @@ public class Attacker : MonoBehaviour {
 	}
 	public void SetSpeed (float speed){
 		currentSpeed = speed;
-		Debug.Log ("Speed set to " + speed);
 	}
 
 	public void StrikeCurrentTarget (float damage){

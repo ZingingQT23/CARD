@@ -11,13 +11,6 @@ public class SetVolume : MonoBehaviour {
 		if (musicManager) {
 			float volume = PlayerPrefsManager.GetMasterVolume ();
 			musicManager.SetVolume (volume);
-		} else {
-			Debug.LogWarning ("No music manager found in Start scene, can not set volume.");
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }

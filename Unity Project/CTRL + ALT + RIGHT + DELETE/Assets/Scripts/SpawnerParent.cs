@@ -35,14 +35,11 @@ public class SpawnerParent : MonoBehaviour {
 			rightStartTime = rightTimeSince;
 		}
 	}
-
-
-	//Choose a random spawner
+		
 	void SpawnHere (GameObject thisAttacker){
 		int spawnerNumber = Random.Range (0, spawners.Length);
 		Spawner thisSpawner = spawners [spawnerNumber];
 		thisSpawner.Spawn (thisAttacker);
-		//Debug.Log (toSpawn);
 	}
 
 }

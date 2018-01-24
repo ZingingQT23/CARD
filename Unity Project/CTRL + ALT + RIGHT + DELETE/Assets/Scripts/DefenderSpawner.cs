@@ -22,13 +22,10 @@ public class DefenderSpawner : MonoBehaviour {
 		Vector2 clickPosition = CalculateWorldPoint ();
 		Vector2 roundedPosition = SnapToGrid (clickPosition);
 		GameObject defender = Button.selectedDefender;
-
-
 		currentStars = FindObjectOfType<StarDisplay> ().starAmount;
 		defenderCost = defender.GetComponent<Defender> ().starCost;
 
 		if (defenderCost > currentStars) {
-			Debug.Log ("Not enough stars!");
 			return;
 		} else {
 			GameObject newDefender = Instantiate (defender, roundedPosition, Quaternion.identity) as GameObject;
@@ -43,8 +40,7 @@ public class DefenderSpawner : MonoBehaviour {
 
 		return new Vector2 (newX, newY);
 	}
-
-
+		
 	Vector2 CalculateWorldPoint (){
 		float mouseX = Input.mousePosition.x;
 		float mouseY = Input.mousePosition.y;
@@ -53,7 +49,6 @@ public class DefenderSpawner : MonoBehaviour {
 		Vector3 weirdTriplet = new Vector3 (mouseX, mouseY, distanceFromCamera);
 		Vector2 worldPosition = myCamera.ScreenToWorldPoint (weirdTriplet);
 			
-
 		return worldPosition;
 	}
 }

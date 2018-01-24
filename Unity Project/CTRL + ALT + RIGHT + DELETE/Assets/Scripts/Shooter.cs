@@ -48,7 +48,6 @@ public class Shooter : MonoBehaviour {
 		foreach (Spawner spawner in spawnerArray) {
 			if (spawner.transform.position.y == gameObject.transform.position.y) {
 				myLaneSpawner = spawner;
-				Debug.Log ("Spawner set!");
 				return;
 			} 
 		}
