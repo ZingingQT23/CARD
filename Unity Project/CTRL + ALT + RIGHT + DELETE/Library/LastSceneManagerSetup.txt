@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/03b Lose.unity
+- path: Assets/Scenes/00a SplashScreen.unity
   isLoaded: 1
   isActive: 1
